@@ -1,0 +1,1 @@
+$(function(){var e=$("#sortable"),a=["def5","def3","def2","def1","def4"];e.sortable({axis:"y",forcePlaceholderSize:!0,helper:"clone",update:function(){var r=e.sortable("toArray"),n=e.sortable("instance");r.forEach(function(e,r){var o=n.element.find("#"+e);o.removeClass("green"),e===a[r]&&o.addClass("green")})}}),e.disableSelection()});
