@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Berlingske Sans';
+    src:	url('./fonts/BerlingskeSans-Rg.eot');
+    src:	url('./fonts/BerlingskeSans-Rg.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/BerlingskeSans-Rg.woff2') format('woff2'),
+    url('./fonts/BerlingskeSans-Rg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berlingske Sans';
+    src:	url('./fonts/BerlingskeSans-Blk.eot');
+    src:	url('./fonts/BerlingskeSans-Blk.eot?#iefix') format('embedded-opentype');
+    src:	url('./fonts/BerlingskeSans-Blk.woff2')format('woff2'),
+    url('./fonts/BerlingskeSans-Blk.woff')format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.wrapper {
+    margin: 2em;
+    font-family: 'Berlingske Sans', Arial, Helvetica, sans-serif;
+}
+
+.test-wrapper {
+    display: flex;
+    margin: 1em 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    flex-direction: row;
+}
+
+.test-wrapper ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.test-wrapper li {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid #ccc;
+}
+
+.test-wrapper ul.terms li {
+    width: 200px;
+    justify-content: center;
+}
+
+.test-wrapper ul.terms li:last-child {
+    border: none;
+}
+
+.test-wrapper ul.definitions li:last-child {
+    border: none;
+}
+
+.test-wrapper ul.definitions li {
+    user-select: none;
+    cursor: grab;
+    background: rgba(128, 0, 0, .15);
+    padding: 0 1em;
+}
+
+.test-wrapper ul.definitions li.green {
+    background: rgba(0, 128, 0, .25);
+    cursor: none;
+}
+
+.tooltip {
+    position: absolute;
+    height: 90px;
+    background: white;
+    box-shadow: 1px 1px 5px -1px;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s, right 0.3s, bottom 0.3s;
+}
+
+.green .tooltip{
+   display: block;
+    right: 20px;
+    bottom: 20px;
+    opacity: 1;
+}
